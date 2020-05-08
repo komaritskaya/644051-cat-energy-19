@@ -1,0 +1,227 @@
+.programs {
+  margin-top: 22px;
+}
+
+.programs__wrapper {
+  .wrapper();
+}
+
+.programs__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.programs__item {
+  background-color: @bg-light-color;
+  padding-top: 30px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 19px;
+  margin-bottom: 20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+  }
+
+  &--loss::before {
+    width: 50px;
+    height: 53px;
+    top: 21px;
+    left: 22px;
+    background-image:
+      url("../img/icon-cat-slim.svg"),
+      url("../img/circle.svg");
+    background-size: 35px 49px, 50px 50px;
+    background-repeat: no-repeat;
+    background-position: top center, bottom center;
+  }
+
+  &--gain::before {
+    width: 67px;
+    height: 50px;
+    top: 24px;
+    left: 13px;
+    background-image:
+      url("../img/icon-cat-pro.svg"),
+      url("../img/circle.svg");
+    background-size: 67px 28px, 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center, bottom center;
+  }
+}
+
+.programs__item-title {
+  font-family: @titles-font;
+  font-size: 24px;
+  line-height: 37px;
+  padding-left: 73px;
+  text-transform: uppercase;
+  color: @text-titles-color;
+}
+
+.programs__item-text {
+  font-size: 14px;
+  line-height: 18px;
+  color: @text-main-color;
+  padding-top: 29px;
+  padding-left: 2px;
+  padding-bottom: 22px;
+  border-bottom: @simple-border;
+  margin-bottom: 19px;
+}
+
+.programs__item-link {
+  font-family: @titles-font;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @text-titles-color;
+  padding-left: 1px;
+  transition: all 0.2s ease;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 12px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 13px;
+    transition: all 0.2s ease;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 34px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .programs {
+    margin-top: 0;
+  }
+
+  .programs__item {
+    margin-bottom: 30px;
+    padding-top: 75px;
+    padding-bottom: 61px;
+    padding-left: 52px;
+    padding-right: 289px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--loss {
+      padding-right: 283px;
+
+      &::before {
+        width: 200px;
+        height: 212px;
+        top: 21.5%;
+        right: 62px;
+        left: auto;
+        background-size: 141px 194px, 200px 200px;
+      }
+    }
+
+    &--gain {
+      padding-right: 312px;
+
+      &::before {
+        width: 268px;
+        height: 200px;
+        top: 24.5%;
+        right: 28px;
+        left: auto;
+        background-size: 268px 113px, 200px 200px;
+      }
+    }
+  }
+
+  .programs__item-link::after {
+    margin-left: 24px;
+  }
+
+  .programs__item-title {
+    font-size: 36px;
+    line-height: 37px;
+    padding-left: 0;
+  }
+
+  .programs__item-text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 35px;
+    border-bottom: none;
+    padding-top: 25px;
+    padding-left: 0;
+    flex-grow: 1;
+  }
+
+  .programs__item-link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    margin-top: 80px;
+  }
+
+  .programs__content {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .programs__item {
+    width: 46.7%;
+    padding-top: 76px;
+
+    &--loss {
+      padding-right: 52px;
+
+      &::before {
+        width: 100px;
+        height: 106px;
+        top: 41px;
+        right: auto;
+        left: 52px;
+        background-size: 71px 97px, 100px 100px;
+      }
+    }
+
+
+    &--gain {
+      padding-right: 52px;
+
+      &::before {
+        width: 134px;
+        height: 100px;
+        top: 47px;
+        right: auto;
+        left: 34px;
+        background-size: 134px 57px, 100px 100px;
+      }
+    }
+  }
+
+  .programs__item-title {
+    padding-left: 162px;
+  }
+
+  .programs__item-text {
+    padding-top: 74px;
+    margin-bottom: 9px;
+  }
+}

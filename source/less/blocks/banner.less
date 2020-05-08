@@ -1,0 +1,101 @@
+.banner {
+  font-family: @text-font;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: @content-main-color;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 39px;
+  margin-bottom: 33px;
+  padding-top: 187px;
+  padding-bottom: 43px;
+  padding-left: 56px;
+  padding-right: 55px;
+  min-height: 289px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
+  &::before {
+    content: "";
+    width: 56px;
+    height: 63px;
+    display: inline-block;
+    background-size: 100%;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+.banner > p {
+  text-align: center;
+  font-family: @text-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white-color;
+}
+
+@media (min-width: @tablet-width) {
+  .banner {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    padding-top: 72px;
+    padding-bottom: 68px;
+    padding-right: 120px;
+    padding-left: 59%;
+    min-height: 200px;
+    margin-top: 69px;
+    margin-bottom: 76px;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+
+    &::before {
+      left: 12.8%;
+      right: auto;
+    }
+  }
+
+  .banner > p {
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    margin: 0;
+    width: 20%;
+    padding-top: 187px;
+    padding-bottom: 43px;
+    padding-left: 40px;
+    padding-right: 40px;
+    min-height: 289px;
+
+    &::before {
+      left: 0;
+      right: 0;
+    }
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
+
+  .banner > p {
+    text-align: center;
+  }
+}

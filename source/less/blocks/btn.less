@@ -1,0 +1,31 @@
+.btn {
+  font-family: @titles-font;
+  text-transform: uppercase;
+  text-align: center;
+  color: @white-color;
+  background-color: @content-main-color;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: @bg-bright-color;
+  }
+
+  &:active {
+    color: rgba(@white-color, 0.3);
+  }
+
+  &--light {
+    background-color: @bg-light-color;
+    color: @text-main-color;
+
+    &:hover,
+    &:focus {
+      background-color: @bg-grey-color;
+    }
+
+    &:active {
+      color: rgba(@text-main-color, 0.3);
+    }
+  }
+}
