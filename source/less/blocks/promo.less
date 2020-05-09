@@ -28,6 +28,7 @@
 .promo__title {
   font-family: @titles-font;
   font-size: 36px;
+  font-weight: 400;
   line-height: 36px;
   color: @white-color;
   margin: 0;
@@ -123,23 +124,9 @@
 }
 
 @media (min-width: @desktop-width) {
-  .promo {
-    background-image:
-      url("../img/index-background-desktop@1x.jpg"),
-      linear-gradient(to left, @bg-bright-color 50%, @white-color 50%);
-    background-repeat: no-repeat, no-repeat;
-    background-position: right top, center;
-    background-size: auto 696px;
-
-    @media (min-resolution: @retina-dppx) {
-      background-image:
-        url("../img/index-background-desktop@2x.jpg"),
-        linear-gradient(to left, @bg-bright-color 50%, @white-color 50%);
-    }
-  }
-
   .promo__wrapper {
-    min-height: 696px;
+    min-height: 526px;
+    padding-bottom: 150px;
     justify-content: center;
     flex-direction: column;
   }
@@ -150,7 +137,7 @@
   }
 
   .promo__title {
-    padding-top: 33px;
+    padding-top: 15px;
   }
 
   .promo__subtitle {
@@ -160,7 +147,7 @@
   .promo__image {
     left: 490px;
     bottom: auto;
-    top: 142px;
+    top: -26px;
     right: auto;
     z-index: 0;
     width: 552px;
